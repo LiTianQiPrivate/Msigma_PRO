@@ -1,0 +1,141 @@
+
+QTreeWidgt{
+}
+QTabWidget::tab{
+
+        border-top: 3px solid rgb(0, 160, 230);
+        background: rgb(200, 200, 200);
+}
+QTabWidget::tab-bar {
+border-top: 3px solid rgb(0, 160, 230);
+background: rgb(200, 200, 200);
+
+}
+ViewForm QWidget#widget{
+    max-height:300em;
+}
+
+ViewForm QWidget#tableWidget {
+    background-color:WhiteSmoke;
+    border-radius: 5px;
+    border-color:#DCDCDC;				/*控件边框的弧度，数值越大，则弯曲得越厉害*/
+}
+QCheckBox{
+    background-color:rgb(121,205,205,30%);
+    border: 1px solid red;
+    border-color:CadetBlue2;				/*外边框的颜色*/
+    border-radius: 5px;				/*控件边框的弧度，数值越大，则弯曲得越厉害*/
+}
+QToolBox::tab,QToolTip{
+    font-size:22px;
+    color:white;
+    font-family:"宋体";
+    height:100px;
+    padding:3px;
+
+    color:#6F6F6F;
+    background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #6495ED,stop:1 #6495ED);
+}
+QToolBox::tab:selected{
+    background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #FF7F24,stop:1 #FF4500);
+}
+QGroupBox{
+    background-color:WhiteSmoke;
+}
+QLineEdit,QTextEdit {
+    border: 1px solid #32435E;
+    border-color:#4EEE94;				/*外边框的颜色*/
+    border-radius: 5px;				/*控件边框的弧度，数值越大，则弯曲得越厉害*/
+}
+QToolButton{
+    min-width:2em;
+    border: 3px solid #AFEEEE;
+    border-color:#43CD80;				/*外边框的颜色*/
+    border-radius: 5px;				/*控件边框的弧度，数值越大，则弯曲得越厉害*/
+}
+QToolButton:hover { /* appearance of a 'checked' icon */
+     background: gray;
+     border: 1px inset gray;
+     position: absolute;
+     top: 1px;
+     right: 1px;
+     bottom: 1px;
+     left: 1px;
+}
+QPushButton{
+    border: 3px solid #AFEEEE;
+    border-color:#6A5ACD;				/*外边框的颜色*/
+    border-radius: 10px;				/*控件边框的弧度，数值越大，则弯曲得越厉害*/
+}
+QPushButton::hover{
+
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #5B5F5F, stop: 0.5 #0C2436,
+                                 stop: 1.0 #27405A);
+    background: gray;
+    border-color: #11223F;			/*boder的颜色,boder跟background做对比设置可以有较明显效果*/
+}
+QPushButton::pressed{
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #969B9C, stop: 0.5 #16354B,
+                                 stop: 1.0 #244F76);
+    border-color: #11505C;
+}
+/*QPushButton::disabled{
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #282B2C, stop: 0.5 #09121A,
+                                 stop: 1.0 #111D29);
+    border-color: #0A1320;
+    color:#6A6864;
+}*/
+
+QComboBox {
+    min-width: 3em;
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,	/*三个坐标对应的是上。中。下的background的颜色*/
+                                 stop: 0 #98F5FF, stop: 0.5 #8EE5EE,
+                                 stop: 1.0 #7AC5CD);
+    border-color: #11505C;			/*改变boder的颜色，以便实现动态感觉*/
+    border-style: outset;
+    border-width: 5px;				/*boder的长度，有突出效果*/
+    border-radius: 1px;
+    padding: 1px;
+ }
+ QFrame{
+     border:1px solid #00C5CD;
+     border-radius:5px;
+ }
+ QMenu{
+     color:#324C6C;
+     background-color:#C0D3EB;
+     margin:2px;
+ }
+
+ QMenu::item{
+    padding:3px 20px 3px 20px;
+ }
+
+ QMenu::indicator{
+     width:13px;
+     height:13px;
+ }
+
+ QMenu::item:selected{
+     color:#324C6C;
+     border:0px solid #B4C2D7;
+     background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #C0D3EB,stop:1 #BCCFE7);
+ }
+
+ QMenu::separator{
+     height:1px;
+     background:#B4C2D7;
+ }
+
+ /*QTableWidget{
+     background: qlineargradient(x1:0, y1:0, x2:0, y2: 1, stop: 0 #E1E1E1, stop: 0.4#DDDDDD, stop:0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+     border: 2px solid #C4C4C3;
+     border-botton-color: #C2C7CB;
+     border-top-left-radius; 4px;
+     border-top-right-radius:4px;
+     min-width:8ex;
+     padding:2px;
+ }*/

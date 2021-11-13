@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TableWidget</class>
+ <widget class="QWidget" name="TableWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>535</width>
+    <height>288</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QTableWidget" name="tableWidget"/>
+   </item>
+  </layout>
+  <action name="showAction">
+   <property name="text">
+    <string>显示</string>
+   </property>
+  </action>
+  <action name="hideAction">
+   <property name="text">
+    <string>隐藏</string>
+   </property>
+  </action>
+  <action name="deleteAction">
+   <property name="text">
+    <string>删除</string>
+   </property>
+  </action>
+  <action name="curveAction">
+   <property name="text">
+    <string>曲线</string>
+   </property>
+  </action>
+  <action name="dashedAction">
+   <property name="text">
+    <string>虚线</string>
+   </property>
+  </action>
+  <action name="pillarAction">
+   <property name="text">
+    <string>柱线</string>
+   </property>
+  </action>
+  <action name="ladderAction">
+   <property name="text">
+    <string>梯线</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

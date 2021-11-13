@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StepWidget</class>
+ <widget class="QWidget" name="StepWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>266</width>
+    <height>386</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QToolBox" name="toolBox">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="page">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>248</width>
+        <height>208</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>数据基本信息</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="page_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>248</width>
+        <height>208</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>曲线显示与设置</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="page_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>248</width>
+        <height>208</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>数据平滑与对齐</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="page_4">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>248</width>
+        <height>208</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>数据统计与分析</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="page_5">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>248</width>
+        <height>208</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>数据打印与输出</string>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

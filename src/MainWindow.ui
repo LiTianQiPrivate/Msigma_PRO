@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1118</width>
+    <height>592</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1118</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="openaction"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>编辑</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>关于</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_5"/>
+   <addaction name="separator"/>
+   <addaction name="action"/>
+   <addaction name="action_2"/>
+   <addaction name="action_3"/>
+   <addaction name="action_4"/>
+   <addaction name="action_9"/>
+   <addaction name="action_10"/>
+   <addaction name="action_11"/>
+   <addaction name="action_12"/>
+   <addaction name="action_13"/>
+   <addaction name="separator"/>
+   <addaction name="action_14"/>
+   <addaction name="action_15"/>
+   <addaction name="separator"/>
+   <addaction name="action_6"/>
+   <addaction name="action_7"/>
+   <addaction name="separator"/>
+   <addaction name="action_8"/>
+  </widget>
+  <action name="openaction">
+   <property name="text">
+    <string>打开</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="icon">
+    <iconset>
+     <normalon>../Image/箭头 (1).png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>箭头</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Image/圆.png</normaloff>../Image/圆.png</iconset>
+   </property>
+   <property name="text">
+    <string>圆</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Image/大括号.png</normaloff>../Image/大括号.png</iconset>
+   </property>
+   <property name="text">
+    <string>括号</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Image/小旗1.png</normaloff>../Image/小旗1.png</iconset>
+   </property>
+   <property name="text">
+    <string>旗帜</string>
+   </property>
+  </action>
+  <action name="action_5">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>标注方式</string>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_6">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Image/撤销.png</normaloff>../Image/撤销.png</iconset>
+   </property>
+   <property name="text">
+    <string>撤销</string>
+   </property>
+  </action>
+  <action name="action_7">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Image/取 消.png</normaloff>../Image/取 消.png</iconset>
+   </property>
+   <property name="text">
+    <string>取消标注</string>
+   </property>
+  </action>
+  <action name="action_8">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Image/删除所有记录.png</normaloff>../Image/删除所有记录.png</iconset>
+   </property>
+   <property name="text">
+    <string>删除所有标注</string>
+   </property>
+  </action>
+  <action name="action_9">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Image/椭圆 1.png</normaloff>../Image/椭圆 1.png</iconset>
+   </property>
+   <property name="text">
+    <string>椭圆带箭头</string>
+   </property>
+  </action>
+  <action name="action_10">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Image/双箭头.png</normaloff>../Image/双箭头.png</iconset>
+   </property>
+   <property name="text">
+    <string>双箭头</string>
+   </property>
+  </action>
+  <action name="action_11">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Image/差异.png</normaloff>../Image/差异.png</iconset>
+   </property>
+   <property name="text">
+    <string>幅值差异</string>
+   </property>
+  </action>
+  <action name="action_12">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Image/关键节点.png</normaloff>../Image/关键节点.png</iconset>
+   </property>
+   <property name="text">
+    <string>关键节点</string>
+   </property>
+  </action>
+  <action name="action_13">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Image/逐点放样.png</normaloff>../Image/逐点放样.png</iconset>
+   </property>
+   <property name="text">
+    <string>逐点</string>
+   </property>
+  </action>
+  <action name="action_14">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Image/文本.png</normaloff>../Image/文本.png</iconset>
+   </property>
+   <property name="text">
+    <string>文本标注</string>
+   </property>
+  </action>
+  <action name="action_15">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Image/添加图片.png</normaloff>../Image/添加图片.png</iconset>
+   </property>
+   <property name="text">
+    <string>添加图片</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

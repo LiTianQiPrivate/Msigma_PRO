@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ViewForm</class>
+ <widget class="QWidget" name="ViewForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>915</width>
+    <height>617</height>
+   </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="25,2,1">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>5</number>
+   </property>
+   <property name="topMargin">
+    <number>5</number>
+   </property>
+   <property name="rightMargin">
+    <number>5</number>
+   </property>
+   <property name="bottomMargin">
+    <number>5</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0">
+     <item>
+      <widget class="QWidget" name="widget" native="true">
+       <property name="tabletTracking">
+        <bool>false</bool>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="tabletTracking">
+      <bool>true</bool>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:none;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox">
+       <item>
+        <property name="text">
+         <string>一维曲线图</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>二维面积图</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>二维柱状图</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>二维散点图</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>二维蜡烛图</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>二维曲线图</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>二维极坐标图</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>二维色板图</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>三维极坐标图</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>三维瀑布图</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>三维曲线图</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>等高线图</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
+  <action name="showaction">
+   <property name="text">
+    <string>显示</string>
+   </property>
+  </action>
+  <action name="hideaction">
+   <property name="text">
+    <string>隐藏</string>
+   </property>
+  </action>
+  <action name="deleteaction">
+   <property name="text">
+    <string>删除</string>
+   </property>
+  </action>
+  <action name="curve">
+   <property name="text">
+    <string>曲线</string>
+   </property>
+  </action>
+  <action name="dashed">
+   <property name="text">
+    <string>虚线</string>
+   </property>
+  </action>
+  <action name="pillar">
+   <property name="text">
+    <string>柱线</string>
+   </property>
+  </action>
+  <action name="ladder">
+   <property name="text">
+    <string>梯线</string>
+   </property>
+  </action>
+  <action name="setaction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>曲线设置</string>
+   </property>
+  </action>
+  <action name="peakValueaction">
+   <property name="text">
+    <string>peakValue</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
