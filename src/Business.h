@@ -14,6 +14,8 @@ class DateCountTabWidget;
 class ViewFormRCS;
 class StatisticalAnalysisWidget;
 class ViewFromHisgram;
+class DataTranslationAline;
+class DataPrintAndOutput;
 class Business
 {
 public:
@@ -31,6 +33,12 @@ public:
 
     CurveShowAndSetWidget *getCurveShowAndSetWidget();
     void setCurveShowAndSetWidget(CurveShowAndSetWidget *value);
+
+    DataTranslationAline *getDataTranslationAline();
+    void setDataTranslationAline(DataTranslationAline *value);
+
+    DataPrintAndOutput *getDataPrintAndOutput();
+    void setDataPrintAndOutput(DataPrintAndOutput *value);
 
     StepWidget *getStepWidget();
     void setStepWidget(StepWidget *value);
@@ -56,6 +64,8 @@ private:
     ModelTabWidget* modelTabWidget = NULL;
     ModelTreeWidget* modelTreeWidget = NULL;
     CurveShowAndSetWidget *curveShowAndSetWidget = nullptr;
+    DataTranslationAline *dataTranslationAline = nullptr;
+    DataPrintAndOutput *dataPrintAndOutput = nullptr;
     StepWidget *stepWidget = nullptr;
     ViewForm *viewForm = nullptr;
     DateCountTabWidget *dateCountTabWidget = nullptr;

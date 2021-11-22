@@ -88,6 +88,26 @@ void Business::setCurveShowAndSetWidget(CurveShowAndSetWidget *value)
     curveShowAndSetWidget = value;
 }
 
+DataTranslationAline *Business::getDataTranslationAline()
+{
+    return dataTranslationAline;
+}
+
+void Business::setDataTranslationAline(DataTranslationAline *value)
+{
+    dataTranslationAline = value;
+}
+
+DataPrintAndOutput *Business::getDataPrintAndOutput()
+{
+    return dataPrintAndOutput;
+}
+
+void Business::setDataPrintAndOutput(DataPrintAndOutput *value)
+{
+    dataPrintAndOutput = value;
+}
+
 StepWidget *Business::getStepWidget()
 {
     return stepWidget;

@@ -3,6 +3,8 @@ FORMS += \
     $$PWD/AddThresholdDot.ui \
     $$PWD/CurveShowAndSetWidget.ui \
     $$PWD/CurveViewForm.ui \
+    $$PWD/DataPrintAndOutput.ui \
+    $$PWD/DataTranslationAline.ui \
     $$PWD/DateCountTabWidget.ui \
     $$PWD/DialogText.ui \
     $$PWD/ModelTabWidget.ui \
@@ -23,6 +25,8 @@ HEADERS += \
     $$PWD/ChartView.h \
     $$PWD/CurveShowAndSetWidget.h \
     $$PWD/CurveViewForm.h \
+    $$PWD/DataPrintAndOutput.h \
+    $$PWD/DataTranslationAline.h \
     $$PWD/DateCountTabWidget.h \
     $$PWD/DialogText.h \
     $$PWD/ModelTabWidget.h \
@@ -44,6 +48,8 @@ SOURCES += \
     $$PWD/ChartView.cpp \
     $$PWD/CurveShowAndSetWidget.cpp \
     $$PWD/CurveViewForm.cpp \
+    $$PWD/DataPrintAndOutput.cpp \
+    $$PWD/DataTranslationAline.cpp \
     $$PWD/DateCountTabWidget.cpp \
     $$PWD/DialogText.cpp \
     $$PWD/ModelTabWidget.cpp \

@@ -149,9 +149,10 @@ void SetCruveDialog::on_pushButton_clicked(bool checked)
 void SetCruveDialog::on_pushButton_2_clicked(bool checked)
 {
     setButtonState();
-    if(ui->pushButton_2->text() == "播放")
+    if(ui->pushButton_2->text() == QString::fromLocal8Bit("播放"))
     {
-        ui->pushButton_2->setText("暂停");
+            qDebug()<<"aaaaaaa";
+        ui->pushButton_2->setText(QString::fromLocal8Bit("暂停"));
         QString str = ui->doubleSpinBox->text();
         if(str == "")
         {
@@ -164,9 +165,9 @@ void SetCruveDialog::on_pushButton_2_clicked(bool checked)
             time_Fps->start(1000);
         }
     }
-    else if(ui->pushButton_2->text() == "暂停")
+    else if(ui->pushButton_2->text() == QString::fromLocal8Bit("暂停"))
     {
-        ui->pushButton_2->setText("播放");
+        ui->pushButton_2->setText(QString::fromLocal8Bit("播放"));
         time_Fps->stop();
         doubleData[1] = ui->doubleSpinBox->text().toDouble();
         updataModelBaseShow(1,1,tempModelBase[0]);
@@ -195,9 +196,9 @@ void SetCruveDialog::on_pushButton_3_clicked(bool checked)
 void SetCruveDialog::on_pushButton_4_clicked(bool checked)
 {
     setButtonState();
-    if(ui->pushButton_4->text() == "播放")
+    if(ui->pushButton_4->text() == QString::fromLocal8Bit("播放"))
     {
-        ui->pushButton_4->setText("暂停");
+        ui->pushButton_4->setText(QString::fromLocal8Bit("暂停"));
         QString str = ui->doubleSpinBox_2->text();
         if(str == "")
         {
@@ -210,9 +211,9 @@ void SetCruveDialog::on_pushButton_4_clicked(bool checked)
             time_Angle->start(1000);
         }
     }
-    else if(ui->pushButton_4->text() == "暂停")
+    else if(ui->pushButton_4->text() == QString::fromLocal8Bit("暂停"))
     {
-        ui->pushButton_4->setText("播放");
+        ui->pushButton_4->setText(QString::fromLocal8Bit("播放"));
         time_Angle->stop();
         doubleData[3] = ui->doubleSpinBox_2->text().toDouble();
         updataModelBaseShow(0,3,tempModelBase[0]);

@@ -12,18 +12,21 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-//    QString qss;
-//    QFile qssFile("../src/QSS/myQss.qss");
-//    qssFile.open(QFile::ReadOnly);
-//    if(qssFile.isOpen())
-//    {
-//        qss = QLatin1String(qssFile.readAll());
-//        qApp->setStyleSheet(qss);
-//        qssFile.close();
-//    }
+    QString qss;
+    QFile qssFile("../src/QSS/myQss.qss");
+    qssFile.open(QFile::ReadOnly);
+    if(qssFile.isOpen())
+    {
+        qss = QLatin1String(qssFile.readAll());
+        qApp->setStyleSheet(qss);
+        qssFile.close();
+    }
+    // 0.数据基本信息 1.曲线显示与设置 2.数据平滑与对齐 3.数据统计与分析 4.数据打印与输出
     stepWidget.setWidget(0, &modelTreeWidget);
     stepWidget.setWidget(1, &curveShowAndSetWidget);
-    stepWidget.setWidget(3,&statisticalAnalysisWidget);
+    stepWidget.setWidget(2, &dataTranslationAline);
+    stepWidget.setWidget(3, &statisticalAnalysisWidget);
+    stepWidget.setWidget(4, &dataPrintAndOutput);
     Business::getBusiness()->setStepWidget(&stepWidget);
     QSplitter* splitter_v = new QSplitter(this);
     splitter_v->setOrientation(Qt::Vertical);
@@ -58,6 +61,8 @@ MainWindow::MainWindow(QWidget *parent)
     Business::getBusiness()->setModelTreeWidget(&modelTreeWidget);
     Business::getBusiness()->setModelTableWidget(&modelTableWidget);
     Business::getBusiness()->setCurveShowAndSetWidget(&curveShowAndSetWidget);
+    Business::getBusiness()->setDataTranslationAline(&dataTranslationAline);
+    Business::getBusiness()->setDataPrintAndOutput(&dataPrintAndOutput);
     Business::getBusiness()->setStatisticalAnalysisWidget(&statisticalAnalysisWidget);
     Business::getBusiness()->setDateCountTabWidget(&dateCountTabWidget);
     Business::getBusiness()->setViewFormRCS(&viewFormRCS);

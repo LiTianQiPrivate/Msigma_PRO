@@ -1,4 +1,4 @@
-#ifndef ADDTHRESHOLDDOT_H
+﻿#ifndef ADDTHRESHOLDDOT_H
 #define ADDTHRESHOLDDOT_H
 
 #include <QWidget>

@@ -13,7 +13,8 @@
 #include "ViewFormRCS.h"
 #include "StatisticalAnalysisWidget.h"
 #include "ViewFromHisgram.h"
-
+#include "DataTranslationAline.h"
+#include "DataPrintAndOutput.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -67,6 +68,8 @@ private:
     ModelTreeWidget modelTreeWidget;
     ModelTableWidget modelTableWidget;
     CurveShowAndSetWidget curveShowAndSetWidget;
+    DataTranslationAline dataTranslationAline;
+    DataPrintAndOutput dataPrintAndOutput;
     StepWidget stepWidget;
     ViewFormRCS viewFormRCS;
     ViewFromHisgram viewFromHisgram;
