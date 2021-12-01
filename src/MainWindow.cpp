@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     QString qss;
-    QFile qssFile("../src/QSS/myQss.qss");
+    QFile qssFile("E:/Msigma-Pro/Msigma_DAR/src/QSS/myQss.qss");
     qssFile.open(QFile::ReadOnly);
     if(qssFile.isOpen())
     {
@@ -57,6 +57,7 @@ MainWindow::MainWindow(QWidget *parent)
     layout->setMargin(0);
     ui->centralwidget->setLayout(layout);
 
+
     Business::getBusiness()->setModelTabWidget(&modelTabWidget);
     Business::getBusiness()->setModelTreeWidget(&modelTreeWidget);
     Business::getBusiness()->setModelTableWidget(&modelTableWidget);
@@ -71,6 +72,54 @@ MainWindow::MainWindow(QWidget *parent)
     this->setWindowTitle(titleName);
     connect(Business::getBusiness()->getStepWidget()->getStepWidgetQtoolBox(),SIGNAL(currentChanged(int)),this,SLOT(on_toolBox_currentChanged(int)));
     connect(Business::getBusiness()->getDateCountTabWidget()->getActionState(),SIGNAL(triggered()),this,SLOT(on_addaction_triggered()));
+    QFile file("./fileList.txt");
+    if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        qDebug() << file.errorString();
+    }
+    else
+    {
+        QTextStream inputFile(&file);
+        QString line = inputFile.readLine();
+        QVector<QString> inputList;
+        while(!line.isNull())
+        {
+            inputList.push_back(line);
+            line = inputFile.readLine();
+        }
+        // 减5是为了去掉.mpro的后缀
+        QString fileNames = inputList[0].left(inputList[0].length()-5) + "/data";
+        qDebug() << "fileNames == " << fileNames;
+        for(int i=1;i<inputList.size();i++)
+        {
+            // inputList[0] 为工程名字  后续的为文件名字
+            QDir dir(fileNames);
+            dir.setFilter(QDir::Files);  //  设置过滤器  只加载文件
+            QStringList list = dir.entryList(QDir::Files);
+            for(int j=0;j<list.size();j++)
+            {
+                QFileInfo file = list[j];
+                if(file.suffix() == "ram" || file.suffix() == "rcs" || file.suffix() == "rcsf" || file.suffix() == "rcsF" || file.suffix() == "rcs2f")
+                {
+                    if(file.fileName() == inputList[i])
+                    {
+                        ModelBase* modelObject = Business::getBusiness()->loadModelBase(list[j],fileNames);
+                        modelTreeWidget.addModelObject(modelObject);
+                        dateCountTabWidget.addModelObject(modelObject);
+                        modelTableWidget.addModelObject(modelObject);
+//                        if(stackedWidget.currentIndex() == 1)
+//                        {
+//                            dateCountTabWidget.addModelObject(modelObject);
+//                        }
+//                        else
+//                        {
+//                            modelTableWidget.addModelObject(modelObject);
+//                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 MainWindow::~MainWindow()

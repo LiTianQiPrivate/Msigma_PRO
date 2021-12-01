@@ -17,7 +17,7 @@ public:
         double refl;
     };
     ModelRAM(QString className = "ModelRAM");
-    void loadFile(QString filePath);
+    void loadFile(QString filePath, QString fileNames = "");
     std::vector<TASK_DATA>& getConditionsDatas()
     {
         return conditionsDatas;

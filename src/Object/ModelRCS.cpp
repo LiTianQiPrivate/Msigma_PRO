@@ -3,6 +3,7 @@
 #include <QFile>
 #include <QFileInfo>
 #include <sstream>
+#include "qdebug.h"
 ModelRCS::ModelRCS(QString className) : ModelBase(className)
 {
     conditionsDatas.push_back(TASK_DATA(QString::fromLocal8Bit(MEASURING)));
@@ -21,9 +22,17 @@ ModelRCS::ModelRCS(QString className) : ModelBase(className)
     conditionsDatas.push_back(TASK_DATA(QString::fromLocal8Bit(REMARK)));
 }
 
-void ModelRCS::loadFile(QString filePath)
+void ModelRCS::loadFile(QString filePath,QString fileNames)
 {
-    QFile file(filePath);
+    QFile file;
+    if(fileNames == "")
+    {
+        file.setFileName(filePath);
+    }
+    else
+    {
+        file.setFileName(fileNames + "/" + filePath);
+    }
     if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
     {
         return;

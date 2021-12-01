@@ -22,7 +22,7 @@ Business *Business::getBusiness()
     return business;
 }
 
-ModelBase* Business::loadModelBase(QString fileName)
+ModelBase* Business::loadModelBase(QString fileName,QString fileNames)
 {
     QFileInfo fileinfo = QFileInfo(fileName);
     QString file_suffix = fileinfo.suffix();
@@ -30,15 +30,15 @@ ModelBase* Business::loadModelBase(QString fileName)
     if(file_suffix == "ram")
     {
         ModelRAM* modelObject = new ModelRAM;
-        modelObject->loadFile(fileName);
+        modelObject->loadFile(fileName,fileNames);
         modelBase = modelObject;
     } else if(file_suffix == "rcs") {
         ModelRCS* modelObject = new ModelRCS;
-        modelObject->loadFile(fileName);
+        modelObject->loadFile(fileName,fileNames);
         modelBase = modelObject;
-    } else if(file_suffix == "rcsF" || file_suffix == "rcsf") {
+    } else if(file_suffix == "rcsF" || file_suffix == "rcsf" || file_suffix == "rcs2F") {
         ModelRCSF* modelObject = new ModelRCSF;
-        modelObject->loadFile(fileName);
+        modelObject->loadFile(fileName,fileNames);
         modelBase = modelObject;
     }
     if(modelBase)

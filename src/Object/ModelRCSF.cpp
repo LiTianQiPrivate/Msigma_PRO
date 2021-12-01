@@ -24,9 +24,17 @@ ModelRCSF::ModelRCSF(QString className) : ModelBase(className)
     conditionsDatas.push_back(TASK_DATA(QString::fromLocal8Bit(REMARK)));
 }
 
-void ModelRCSF::loadFile(QString filePath)
+void ModelRCSF::loadFile(QString filePath, QString fileNames)
 {
-    QFile file(filePath);
+    QFile file;
+    if(fileNames == "")
+    {
+        file.setFileName(filePath);
+    }
+    else
+    {
+        file.setFileName(fileNames + "/" + filePath);
+    }
     if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
     {
         return;

@@ -18,7 +18,7 @@ public:
         double phi;
     };
     ModelRCS(QString className = "ModelRCS");
-    void loadFile(QString filePath);
+    void loadFile(QString filePath, QString fileNames="");
     std::vector<TASK_DATA>& getConditionsDatas()
     {
         return conditionsDatas;

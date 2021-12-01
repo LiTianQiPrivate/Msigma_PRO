@@ -21,7 +21,7 @@ public:
         double phi;
     };
     ModelRCSF(QString className = "ModelRCSF");
-    void loadFile(QString filePath);
+    void loadFile(QString filePath,QString fileNames = "");
     QString findDataInfo(QString key);
     bool findDataInfoFlag(QString key);
     std::vector<TASK_DATA>& getConditionsDatas()

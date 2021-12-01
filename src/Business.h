@@ -21,7 +21,7 @@ class Business
 public:
     Business();
     static Business* getBusiness();
-    ModelBase *loadModelBase(QString fileName);
+    ModelBase *loadModelBase(QString fileName, QString fileNames = "");
     ModelTableWidget *getModelTableWidget();
     void setModelTableWidget(ModelTableWidget *value);
 

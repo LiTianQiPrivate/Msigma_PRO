@@ -3,7 +3,7 @@
 #include <QFile>
 #include <QFileInfo>
 #include <sstream>
-
+#include "qdebug.h"
 ModelRAM::ModelRAM(QString className) : ModelBase(className)
 {
     conditionsDatas.push_back(TASK_DATA(QString::fromLocal8Bit(MEASURING)));
@@ -14,10 +14,22 @@ ModelRAM::ModelRAM(QString className) : ModelBase(className)
     conditionsDatas.push_back(TASK_DATA(QString::fromLocal8Bit(INCIDENT_ANGLE)));
     conditionsDatas.push_back(TASK_DATA(QString::fromLocal8Bit(REMARK)));
 }
-
-void ModelRAM::loadFile(QString filePath)
+/**
+ * @brief ModelRAM::loadFile
+ * @param filePath
+ * @param fileNames 文件所在路径
+ */
+void ModelRAM::loadFile(QString filePath,QString fileNames)
 {
-    QFile file(filePath);
+    QFile file;
+    if(fileNames == "")
+    {
+        file.setFileName(filePath);
+    }
+    else
+    {
+        file.setFileName(fileNames + "/" + filePath);
+    }
     if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
     {
         return;
